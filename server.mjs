@@ -16,7 +16,7 @@ app.use(ssrHandler);
 
 app.setErrorHandler(async (error, request, reply) => {
   console.log("Inside the setErrorHandler handler");
-  reply.send("There was an error");
+  reply.raw.end("Something went wrong");
   return reply;
 });
 
